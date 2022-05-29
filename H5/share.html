@@ -25,7 +25,9 @@
         
         <div class="button">
             <span class="installed" ontouchstart="openApp()"></span>
-            <span class="uninstalled" ontouchstart="appDownload()">
+            <span class="uninstalled">
+                <!-- b标签作用 兼容元素有动画时 微信中无法触发事件 -->
+                <b ontouchstart="appDownload()"></b>
                 <a href="javascript:;">我未安装，点击下载</a>
             </span>
             
