@@ -1,11 +1,11 @@
 访问地址(我上传的是github服务器，你们不开vpn访问慢是正常的。如果想要提高访问速度，请把代码放到测试环境)
 
-以下请用电脑访问 
+以下请用电脑访问  
 官网：https://sanplee.github.io/tyz/homePage/index.html
 
-以下请用手机访问 
-H5转发：https://sanplee.github.io/tyz/H5/share.html 
-H5用户协议：https://sanplee.github.io/tyz/H5/userAgreement.html 
+以下请用手机访问  
+H5转发：https://sanplee.github.io/tyz/H5/share.html  
+H5用户协议：https://sanplee.github.io/tyz/H5/userAgreement.html  
 H5隐私协议：https://sanplee.github.io/tyz/H5/privacyAgreement.html 
 
 
