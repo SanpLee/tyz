@@ -81,18 +81,37 @@
 .button .installed {
   width: 6.2rem;
   height: 1rem;
-  background-image: url(../images/installed@2x.png);
+  /* background-image: url(../images/installed@2x.png);
   background-position: center top;
-  background-size: 100% auto;
+  background-size: 100% auto; */
+  line-height: 1rem;
+  background-color: rgba(255, 255, 255, 0.15);
+  font-size: .32rem;
+  font-family: PingFang SC-Medium, PingFang SC;
+  font-weight: 500;
+  color: #FFFFFF;
+  text-align: center;
+  border-radius: .88rem;
+  border: 1px solid #465362;
+  box-shadow: 0px 8px 8px 2px rgba(0, 0, 0, 0.06);
 }
 
 .button .uninstalled {
   margin-top: 0.3rem;
   width: 6.2rem;
   height: 1rem;
-  background-image: url(../images/uninstalled@2x.png);
+  line-height: 1rem;
+  background-color: #222;
+  font-size: .32rem;
+  font-family: PingFang SC-Medium, PingFang SC;
+  font-weight: 500;
+  color: #FFFFFF;
+  text-align: center;
+  border-radius: .88rem;
+  border: 1px solid #465362;
+  /* background-image: url(../images/uninstalled@2x.png);
   background-position: center top;
-  background-size: 100% auto;
+  background-size: 100% auto; */
   -webkit-animation: anUninstalled 4.5s ease-in-out infinite;
   animation: anUninstalled 4.5s ease-in-out infinite;
 }
