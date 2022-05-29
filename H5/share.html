@@ -25,12 +25,7 @@
         
         <div class="button">
             <span class="installed" ontouchstart="openApp()"></span>
-            <span class="uninstalled">
-                <!-- b标签作用 兼容元素有动画时 微信中无法触发事件 -->
-                <b ontouchstart="appDownload()"></b>
-                <a href="javascript:;">我未安装，点击下载</a>
-            </span>
-            
+            <span class="uninstalled">我未安装，点击下载</span>
         </div>
    </div> 
 
@@ -49,13 +44,7 @@
         const queryName = getUrlParam('code') || '6a8b17b4a2aa40f43821c9fd164299d5'
         
 
-        function appDownload(){
-            if (iosReg.test(ua)) {
-              window.location.href = 'https://apps.apple.com/cn/app/id414478124';
-            }else {
-                window.location.href = 'https://webcdn.m.qq.com/webapp/homepage/index.html#/appDetail?apkName=com.tencent.mm&info=044042809665195943CCF37392DA6967';
-            }
-        }
+         
 
         function openApp(){
             alert('等待提供')
@@ -81,6 +70,16 @@
         
 
         $(function () { 
+
+
+           // 未安装点击按钮事件 
+            $(".uninstalled").click(function () { 
+                if (iosReg.test(ua)) {
+                    window.location.href = 'https://apps.apple.com/cn/app/id414478124';
+                }else {
+                    window.location.href = 'https://webcdn.m.qq.com/webapp/homepage/index.html#/appDetail?apkName=com.tencent.mm&info=044042809665195943CCF37392DA6967';
+                }
+            })
             
             $.ajax({
                 url:"https://rd.api.yurongpobi.com/v1/user/invite/shareQuery?code=" + queryName,
