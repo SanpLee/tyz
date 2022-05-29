@@ -25,7 +25,7 @@
         
         <div class="button">
             <span class="installed"></span>
-            <span class="uninstalled">我未安装，点击下载</span>
+            <button class="uninstalled">我未安装，点击下载</button>
         </div>
    </div> 
 
@@ -78,8 +78,7 @@
             })
             
             // 未安装点击按钮事件 
-            $(".uninstalled").on('tap',function () { 
-                alert('ss')
+            $(".uninstalled").click(function () { 
                 if (iosReg.test(ua)) {
                     window.location.href = 'https://apps.apple.com/cn/app/id414478124';
                 }else {
