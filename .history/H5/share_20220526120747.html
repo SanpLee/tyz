@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>Document</title>
+    <link href="css/index.css" rel="stylesheet">
+</head>
+<body>
+
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript">
+        $(function () { 
+            $.ajax({
+                url:"https://rd.api.yurongpobi.com/v1/user/invite/shareQuery?code=xxxxx&callback=xxxxx",
+                type:'get',
+                dataType:'jsonp',
+                jsonpCallback:"fn",//自定义传递给服务器的函数名，而不是使用jquery自动生成的
+                jsonp:'cb',//把传递函数名的那个形参callBack变为cb
+                success:function(data){
+                    console.log(data)
+                },
+            })
+        })    
+    </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+
+.bg{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/bg@2x.jpg);
+    background-position: center top;
+    background-size: 100% 100%; 
+}
+.mar{
+    padding: 1.82rem .18rem 0;
+}
+.mask{
+    width: 100%;
+    height: 7.54rem;
+    background-image: url(../images/mask@2x.png);
+    background-position: center top;
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.mask .top{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -0.5rem;
+}
+.mask .top span{
+    width: 1.6rem;
+    height: 1.6rem;
+    background-image: url(../images/head-portrait@2x.png);
+    background-position: center top;
+    background-size: 100% 100%;
+    display: block;
+}
+.mask .top p{
+    font-size: .4rem;
+    font-family: PingFang SC-Medium, PingFang SC;
+    font-weight: 500;
+    color: #FFFFFF;
+    text-align: center;
+    padding-top:.4rem;
+}
+.mask .center{
+    font-size: .44rem;
+    line-height: .66rem;
+    font-family: PingFang SC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #FFFFFF;
+    letter-spacing: 1px;
+    text-align: center;
+}
+.mask .bottom{
+    width: 2.27rem;
+    height: 2.86rem;
+    background-image: url(../images/ele@2x.png);
+    background-position: center top;
+    background-size: 100% 100%;
+}
+.button{
+    padding-top: 1.34rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.button .installed{
+    width: 6.2rem;
+    height: 1rem;
+    background-image: url(../images/installed@2x.png);
+    background-position: center top;
+    background-size: 100% auto;
+}
+.button .uninstalled{
+    margin-top: .3rem;
+    width: 6.2rem;
+    height: 1rem;
+    background-image: url(../images/uninstalled@2x.png);
+    background-position: center top;
+    background-size: 100% auto;
+    animation: anUninstalled 4s ease infinite;
+}
+
+@keyframes anUninstalled
+{
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(0.8);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    75% {
+        transform: scale(0.8);
+    }
+    100%{
+        transform: scale(1);
+    }
+}

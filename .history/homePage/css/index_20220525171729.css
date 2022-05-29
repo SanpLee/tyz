@@ -1,0 +1,128 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font: 12px/1.5 Microsoft YaHei,Heiti SC,tahoma,arial,Hiragino Sans GB,"\5B8B\4F53",sans-serif;
+  background: #fff;
+  color: #000;
+}
+ol,ul,li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+  border: 0;
+}
+
+input::-moz-focus-inner {
+  border-color: transparent !important;
+}
+
+table {
+  border-collapse: collapse;
+  table-layout: fixed;
+  word-break: break-all; /*固定表格宽度，不被撑开*/
+}
+
+input[type="button"]:hover,input[type="submit"]:hover {
+  cursor: pointer;
+}
+
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+/*清除浮动*/
+.clearfix:after {
+  content: "020";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.clearfix {
+  /* 触发 hasLayout */
+  zoom: 1;
+}
+/* rest css end */
+
+/* page css */
+.bg{
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/bg.jpg);
+  background-color: white;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+.main {
+  width:1440px;
+  height: 100%;
+  margin: 0 auto;
+}
+.sc-top {
+   padding: 18px 0 0 220px; 
+}
+.sc-top .logo{
+    width: 44px;
+    height: 44px;
+    background-image: url(../images/ic_logo.png);
+    background-repeat: no-repeat;
+}
+.sc-top .name{
+    font-size: 32px;
+    font-family: Noto Sans SC-Medium, Noto Sans SC;
+    font-weight: 500;
+    color: #FFFFFF;
+    height: 44px;
+    line-height: 44px;
+    padding-left: 16px;
+}
+.sc-des1{
+    padding-top:158px;
+    height: 95px;
+    font-size: 68px;
+    font-family: PingFang SC-Semibold, PingFang SC;
+    font-weight: 600;
+    color: #FFFFFF;
+    line-height: 80px;
+    letter-spacing: 3px;
+    text-align: center;
+}
+.sc-des2{
+    padding-top:100px;
+    height: 41px;
+    font-size: 29px;
+    font-family: PingFang SC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #EEEEEE;
+    line-height: 34px;
+    letter-spacing: 5px;
+    text-align: center;
+}
+.sc-use{
+    width: 464px;
+    margin: 40px auto 0;
+}
+.sc-use span{
+    height: 56px;
+    background: #FFF;
+    border-radius: 10px;
+    float: left;
+    margin-left: 40px;
+}
+.sc-use span:first{
+    margin-left: 0;
+}
+.sc-use span.apple,.sc-use span.android{
+    width:160px;
+}
+.sc-use span.apple b{
+    width: 19px;
+    height: 22px;
+    display: block;
+    background-image: u;
+}
