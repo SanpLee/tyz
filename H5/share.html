@@ -33,7 +33,7 @@
 
     <script src="js/common.js"></script>
     <script src="js/jquery-1.11.0.min.js"></script>
-    <script src="js/fastclick.js"></script>
+    <script type='application/javascript' src="js/fastclick.js"></script>
     <script>
         
         const ua = navigator.userAgent;
@@ -75,7 +75,7 @@
 
         $(function () { 
 
-
+            FastClick.attach(document.body);
             
             
             $.ajax({
