@@ -87,6 +87,7 @@
 }
 
 .button .uninstalled {
+  display: block;
   margin-top: 0.3rem;
   width: 6.2rem;
   height: 1rem;
@@ -107,8 +108,8 @@
   /* background-image: url(../images/uninstalled@2x.png);
   background-position: center top;
   background-size: 100% auto; */
-  -webkit-animation: anUninstalled 4.5s ease-in-out infinite;
-  animation: anUninstalled 4.5s ease-in-out infinite;
+  -webkit-animation: anUninstalled 4.5s linear infinite;
+  animation: anUninstalled 4.5s linear infinite;
 }
 
 @-webkit-keyframes anUninstalled {
