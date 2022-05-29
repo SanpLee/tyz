@@ -90,6 +90,11 @@
   margin-top: 0.3rem;
   width: 6.2rem;
   height: 1rem;
+}
+.button .uninstalled a{
+  display: block;
+  width: 6.2rem;
+  height: 1rem;
   line-height: 1rem;
   background-color: #222;
   font-size: .32rem;

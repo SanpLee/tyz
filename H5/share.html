@@ -25,7 +25,10 @@
         
         <div class="button">
             <span class="installed" ontouchstart="openApp()"></span>
-            <a class="uninstalled" ontouchstart="appDownload()" href="javascript:;">我未安装，点击下载</a>
+            <span class="uninstalled" ontouchstart="appDownload()">
+                <a href="javascript:;">我未安装，点击下载</a>
+            </span>
+            
         </div>
    </div> 
 
@@ -55,6 +58,12 @@
 
         function openApp(){
             alert('等待提供')
+            if (iosReg.test(ua)) {
+                // 请替换跳转内容
+              window.location.href = '#iso'; 
+            }else {
+                window.location.href = '#android';
+            }
         }
 
         // 获取访问链接参数方法
