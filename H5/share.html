@@ -24,7 +24,7 @@
         </div>
         
         <div class="button">
-            <span class="installed" ontouchstart="openApp()"></span>
+            <span class="installed"></span>
             <span class="uninstalled">我未安装，点击下载</span>
         </div>
    </div> 
@@ -46,15 +46,7 @@
 
          
 
-        function openApp(){
-            alert('等待提供')
-            if (iosReg.test(ua)) {
-                // 请替换跳转内容
-              window.location.href = '#iso'; 
-            }else {
-                window.location.href = '#android';
-            }
-        }
+        
 
         // 获取访问链接参数方法
         function getUrlParam(name) {
@@ -72,8 +64,20 @@
         $(function () { 
 
 
-           // 未安装点击按钮事件 
-            $(".uninstalled").click(function () { 
+            // 已安装点击按钮事件 
+            $(".installed").click(function () { 
+                alert('等待提供')
+                if (iosReg.test(ua)) {
+                    // 请替换跳转内容
+                window.location.href = '#iso'; 
+                }else {
+                    window.location.href = '#android';
+                }
+            
+            })
+            
+            // 未安装点击按钮事件 
+            $(".uninstalled").on('click',function () { 
                 if (iosReg.test(ua)) {
                     window.location.href = 'https://apps.apple.com/cn/app/id414478124';
                 }else {
