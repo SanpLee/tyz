@@ -1,12 +1,11 @@
 * {
   margin: 0;
   padding: 0;
-  outline: none;
 }
-*:not(input, textarea) {
+/* *:not(input, textarea) {
   -webkit-touch-callout: inherit;
   -webkit-user-select: auto;
-}
+} */
 input[type="submit"],
 input[type="reset"],
 input[type="button"],

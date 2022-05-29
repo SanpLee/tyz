@@ -24,15 +24,16 @@
         </div>
         
         <div class="button">
-            <span class="installed"></span>
-            <button class="uninstalled">我未安装，点击下载</button>
+            <span class="installed" ontouchstart="openApp()"></span>
+            <button class="uninstalled" ontouchstart="appDownload()">我未安装，点击下载</button>
+            
         </div>
    </div> 
 
 
     <script src="js/common.js"></script>
     <script src="js/jquery-1.11.0.min.js"></script>
-    <script src="js/zepto.min.js"></script>
+    <script src="js/fastclick.js"></script>
     <script>
         
         const ua = navigator.userAgent;
@@ -45,7 +46,17 @@
         const queryName = getUrlParam('code') || '6a8b17b4a2aa40f43821c9fd164299d5'
         
 
-         
+        function appDownload(){
+            if (iosReg.test(ua)) {
+              window.location.href = 'https://apps.apple.com/cn/app/id414478124';
+            }else {
+                window.location.href = 'https://webcdn.m.qq.com/webapp/homepage/index.html#/appDetail?apkName=com.tencent.mm&info=044042809665195943CCF37392DA6967';
+            }
+        }
+
+        function openApp(){
+            alert('等待提供')
+        }
 
         
 
@@ -65,26 +76,7 @@
         $(function () { 
 
 
-            // 已安装点击按钮事件 
-            $(".installed").click(function () { 
-                alert('等待提供')
-                if (iosReg.test(ua)) {
-                    // 请替换跳转内容
-                window.location.href = '#iso'; 
-                }else {
-                    window.location.href = '#android';
-                }
             
-            })
-            
-            // 未安装点击按钮事件 
-            $(".uninstalled").click(function () { 
-                if (iosReg.test(ua)) {
-                    window.location.href = 'https://apps.apple.com/cn/app/id414478124';
-                }else {
-                    window.location.href = 'https://webcdn.m.qq.com/webapp/homepage/index.html#/appDetail?apkName=com.tencent.mm&info=044042809665195943CCF37392DA6967';
-                }
-            })
             
             $.ajax({
                 url:"https://rd.api.yurongpobi.com/v1/user/invite/shareQuery?code=" + queryName,
