@@ -6,6 +6,8 @@
             var clientWidth = docEl.clientWidth;
             if (!clientWidth) return;
             docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+
+            document.querySelectorAll('.bg')[0].style.opacity = 1
         };
     if (!doc.addEventListener) return;
     win.addEventListener(resizeEvt, recalc, false);
