@@ -89,6 +89,8 @@ sw.*
 # Vim swap files
 *.swp
 
+.yml
+
 #忽略static文件下的game文件
 static/game
 
