@@ -16,7 +16,8 @@
   background-image: url(../images/mask@2x.png);
   background-position: center top;
   background-size: 100%;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   border-radius: 0.3rem;
   box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3);
   display: flex;
