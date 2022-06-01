@@ -24,7 +24,7 @@
         </div>
         
         <div class="button">
-            <span class="installed" ontouchstart="openApp()"></span>
+            
             <button class="uninstalled" ontouchstart="appDownload()">我未安装，点击下载</button>
             
         </div>
@@ -48,7 +48,35 @@
 
         function appDownload(){
             if (iosReg.test(ua)) {
-              window.location.href = 'https://apps.apple.com/cn/app/id414478124';
+              //window.location.href = 'https://apps.apple.com/cn/app/id414478124';
+
+                    
+
+                   const url = 'https://api.shijiehuashanglianmeng.com/apple-app-site-association'
+                    const t = 1000
+                    const t1 = Date.now()
+                    const ifr = document.createElement('iframe')
+                    // 下面的this.url 是需要跳转到app的schema链接
+                    ifr.setAttribute('src', url)
+                    ifr.setAttribute('style', 'display:none')
+                    document.body.appendChild(ifr)
+                    setTimeout(function() {
+                        // 启动app时间较长处理
+                        const t2 = Date.now()
+                        document.body.removeChild(ifr)
+                        if (t2 - t1 < t + 100) {
+                        console.log('hasApp', false)
+                        // 没有安装App，跳转到对应的App下载页面。
+                        // 下面的例子App下载页面也是H5页面。
+                        window.location.href = 'https://sanplee.github.io/tyz/H5/userAgreement.html '
+                        } else {
+                        console.log('hasApp', true)
+                        // 已经安装App，下面的this.url是需要跳转到app的schema链接。
+                        window.location.href = url
+                        }
+                    }, t)
+
+
             }else {
                 window.location.href = 'https://webcdn.m.qq.com/webapp/homepage/index.html#/appDetail?apkName=com.tencent.mm&info=044042809665195943CCF37392DA6967';
             }
