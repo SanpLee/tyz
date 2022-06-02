@@ -1,9 +1,9 @@
 ## 预览地址
 
-以下请用电脑访问  
+电脑预览  
 官网：https://sanplee.github.io/tyz/homePage/index.html
 
-以下请用手机访问  
+移动端手机预览  
 H5转发：https://sanplee.github.io/tyz/H5/share.html?code=6a8b17b4a2aa40f43821c9fd164299d5  
 H5用户协议：https://sanplee.github.io/tyz/H5/userAgreement.html  
 H5隐私协议：https://sanplee.github.io/tyz/H5/privacyAgreement.html 
