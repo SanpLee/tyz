@@ -9,8 +9,40 @@
     <title>团宇宙</title>
     <link href="css/index.css" rel="stylesheet">
     <link href="css/share.css" rel="stylesheet">
+    <!-- 引用第三方 -->
+    <!-- 以下为xinstall集成代码，请在html文档中尽量靠前放置，加快初始化过程（请完整拷贝并根据自己的应用情况修改appkey和button参数，注释内附加功能按需使用） -->
+    <!-- 直接引用下面的cdn加速链接才能得到及时的更新；请勿将此js文件下载到自己的服务器-->
+    <script type="text/javascript" charset="UTF-8" src="https://cdn.xinstall.com/xinstall.js"></script>
+    <script type="text/javascript">
+    /*Web页面传参数据格式为：json string/js Object；应用被拉起或是首次安装时，客户端使用相应api可获取此数据，数据以uo方式接收*/
+    var data = XInstall.parseUrlParams(); //xinstall.js中提供的工具函数，解析url中的所有查询参数，函数返回格式为js Object
+    new XInstall({
+        /*xinstall中应用的唯一标识，用于识别您的应用*/
+        appKey : "zb5ds8p",
+        /*—————————————————分割线——————————————————*/
+        /*附加功能1：特殊情况无法直接跳转下载时，引导打开三方浏览器下载的遮罩层可用以下方法自定义样式*/
+        mask:function(){
+            return "<div style='background:rgba(0,0,0,.5);position:fixed;left:0;top:0;filter:alpha(opacity=50);width:100%;height:100%;z-index:9999;'><div style='text-align:right; margin-top:1%; margin-right:5%;'>< img style='width:70%; margin:0 auto;' src='https://cdn.xinstall.com/image/no_safari.png'/></div></div>"
+            },
+            /*—————————————————分割线——————————————————*/
+            /*xinstall初始化完成的回调函数*/
+            onready : function() {
+            var m = this, button = document.getElementById("downloadButton");
+            /*用户点击您页面上的某个按钮时(假定您的按钮id为downloadButton)，安装app*/
+            /*
+                警告：
+                1、被绑定使用xinstall下载拉起的id，不需要额外再单独写下载相关的处理，如使用a标签href另外下载或者使用js绑定点击使用额外的下载，这样会导致拉起和数据传递失效！！！
+                2、按钮id值请勿与附加功能2中重复使用，否则将导致功能失效！！
+            */
+            button.onclick = function() {
+                m.wakeupOrInstall();
+            }
+        }
+    }, data);
+    </script>
 </head>
 <body>
+
    <div class="bg">
         <div class="mar">
             <div class="mask">
@@ -25,7 +57,7 @@
         
         <div class="button">
             
-            <button class="uninstalled" ontouchstart="appDownload()">我未安装，点击下载</button>
+            <button class="uninstalled" id="downloadButton">我未安装，点击下载</button>
             
         </div>
    </div> 
@@ -46,52 +78,14 @@
         const queryName = getUrlParam('code') || '6a8b17b4a2aa40f43821c9fd164299d5'
         
 
-        function appDownload(){
-            if (iosReg.test(ua)) {
-              //window.location.href = 'https://apps.apple.com/cn/app/id414478124';
+        // function appDownload(){
+        //     if (iosReg.test(ua)) {
+        //       window.location.href = 'https://apps.apple.com/cn/app/id414478124';
+        //     }else {
+        //         window.location.href = 'https://webcdn.m.qq.com/webapp/homepage/index.html#/appDetail?apkName=com.tencent.mm&info=044042809665195943CCF37392DA6967';
+        //     }
+        // }
 
-                    
-
-                   const url = 'https://api.shijiehuashanglianmeng.com/apple-app-site-association'
-                    const t = 1000
-                    const t1 = Date.now()
-                    const ifr = document.createElement('iframe')
-                    // 下面的this.url 是需要跳转到app的schema链接
-                    ifr.setAttribute('src', url)
-                    ifr.setAttribute('style', 'display:none')
-                    document.body.appendChild(ifr)
-                    setTimeout(function() {
-                        // 启动app时间较长处理
-                        const t2 = Date.now()
-                        document.body.removeChild(ifr)
-                        if (t2 - t1 < t + 100) {
-                        console.log('hasApp', false)
-                        // 没有安装App，跳转到对应的App下载页面。
-                        // 下面的例子App下载页面也是H5页面。
-                        window.location.href = 'https://sanplee.github.io/tyz/H5/userAgreement.html '
-                        } else {
-                        console.log('hasApp', true)
-                        // 已经安装App，下面的this.url是需要跳转到app的schema链接。
-                        window.location.href = url
-                        }
-                    }, t)
-
-
-            }else {
-                window.location.href = 'https://webcdn.m.qq.com/webapp/homepage/index.html#/appDetail?apkName=com.tencent.mm&info=044042809665195943CCF37392DA6967';
-            }
-        }
-
-        function openApp(){
-            alert('等待提供')
-            if (iosReg.test(ua)) {
-              window.location.href = '#';
-            }else {
-                window.location.href = '#';
-            }
-        }
-
-        
 
         // 获取访问链接参数方法
         function getUrlParam(name) {
