@@ -235,6 +235,7 @@ input[type="button"]:hover,input[type="submit"]:hover {
     margin-left: -500px;
     z-index: 10;
     color: #B3B3B9;
+    text-align: center;
 }
 .company span{
     padding-right: 30px;
