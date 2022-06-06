@@ -234,12 +234,19 @@ input[type="button"]:hover,input[type="submit"]:hover {
     left: 50%;
     margin-left: -500px;
     z-index: 10;
+    color: #B3B3B9;
 }
 .company span{
     padding-right: 30px;
     font-size: 13px;
     font-family: PingFang SC-Regular, PingFang SC;
     font-weight: 400;
+}
+.company a{
+    padding-right: 5px;
+    padding-left:5px;
+    font-size: 13px;
+    font-family: PingFang SC-Regular, PingFang SC;
+    font-weight: 400;
     color: #B3B3B9;
-
 }
