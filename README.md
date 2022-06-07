@@ -29,8 +29,8 @@ ps：协议页面需要等到后台更新数据后方可正常访问。
 
 ps: 我上传的是github服务器，你们如果不开vpn访问会比较慢。如果想要提高访问速度，请把代码放到你们的测试环境进行访问
 
-## 代码下载仓库地址  
-  - https://github.com/SanpLee/tyz.git  
+## 代码下载  
+仓库地址: https://github.com/SanpLee/tyz.git  
 
 执行此段代码可下载源码：git clone https://github.com/SanpLee/tyz.git
 
