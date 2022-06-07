@@ -99,6 +99,7 @@ input[type="button"]:hover,input[type="submit"]:hover {
     z-index: 10;
 }
 .info{
+    max-width:1020px;
     min-width:1020px;
     height: 700px;
     position: absolute;
