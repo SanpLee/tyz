@@ -50,14 +50,21 @@ input[type="button"]:hover,input[type="submit"]:hover {
 /* rest css end */
 
 /* page css */
-.bg{  
-  min-width: 1000px;  
-  background-image: url(../images/bg.jpg);
-  background-color: white;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
+.container{
+    
+    background-color: white;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.bg-1{  
+    min-width: 1000px;
+    background-image: url(../images/bg-1.jpg);
+}
+.bg-2{
+    min-width:1020px;
+    background-image: url(../images/bg-2.jpg);
 }
 
 .header {
@@ -89,6 +96,17 @@ input[type="button"]:hover,input[type="submit"]:hover {
     bottom: 68px;
     margin-left: -500px;
     margin-top: -385px;
+    z-index: 10;
+}
+.info{
+    min-width:1020px;
+    height: 700px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    bottom: 68px;
+    margin-left: -510px;
+    margin-top: -360px;
     z-index: 10;
 }
 .sc-des1{
@@ -227,6 +245,7 @@ input[type="button"]:hover,input[type="submit"]:hover {
     text-align: center;
 
 }
+
 .company{
     width: 1000px;
     position: absolute;
@@ -250,4 +269,27 @@ input[type="button"]:hover,input[type="submit"]:hover {
     font-family: PingFang SC-Regular, PingFang SC;
     font-weight: 400;
     color: #B3B3B9;
+}
+
+/* 浮层 */
+.nav-bar{
+    position: fixed; 
+    width: 20px;
+    height: 100px;
+    right: 68px;
+    top: 45%;
+    z-index: 11;
+}
+.nav-bar a{
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-bottom: 16px;
+     
+}
+.nav-bar a.cur{
+    height: 26px;
+    background-color: #FD8A5B;
 }

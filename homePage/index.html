@@ -9,7 +9,7 @@
     <link href="css/index.css" rel="stylesheet">
 </head>
 <body>
-    <div class="bg">
+    <div class="container bg-1">
         <div class="header clearfix">
             <div class="logo left"></div>
             <div class="name left">团宇宙</div>
@@ -34,6 +34,7 @@
                     <li>微信公众号：tuanyuzhou</li>
                 </ul>
             </div>
+            
         </div>
         <div class="company">
             <span>© 2015-2022 北京宇融破壁科技有限公司</span>
@@ -43,13 +44,18 @@
             <a href="license.html" target="_blank">营业执照</a>
         </div>    
     </div>
+    <!-- 浮层 -->
+    <div class="nav-bar">
+        <a href="index.html" class="cur"></a>
+        <a href="info.html"></a>   
+   </div>
     
     <script type="text/javascript">
 
         // 设置元素高度为浏览器可视区域高度
         var clientHeight = document.documentElement.clientHeight
         if(clientHeight < 900) clientHeight = 900
-        document.querySelectorAll('.bg')[0].style.height= clientHeight + 'px'
+        document.querySelectorAll('.container')[0].style.height= clientHeight + 'px'
 
         var qrCodeImg = document.getElementById('qrCodeImg')
         var qrCode = document.getElementById('qrCode')

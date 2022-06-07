@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="团宇宙是一款为不同群体提供专属服务的社群社交APP，年轻人聚集的兴趣交友社区">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <title>团宇宙</title>
+    <link href="css/index.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container bg-2">
+        <div class="header clearfix">
+            <div class="logo left"></div>
+            <div class="name left">团宇宙</div>
+        </div>
+        <div class="info">
+            <img src="images/pic_jieshao.png" width="100%" /> 
+        
+        </div>
+        <div class="company">
+            <span>© 2015-2022 北京宇融破壁科技有限公司</span>
+            <a href="https://beian.miit.gov.cn/#/Integrated/recordQuery" target="_blank">京ICP备2021040243号-1</a> |
+            <a href="../H5/userAgreement.html" target="_blank">用户服务协议</a> |
+            <a href="../H5/privacyAgreement.html" target="_blank">隐私协议</a> |
+            <a href="license.html" target="_blank">营业执照</a>
+        </div>    
+    </div>
+    <!-- 浮层 -->
+    <div class="nav-bar">
+        <a href="index.html"></a>
+        <a href="info.html" class="cur"></a>   
+   </div>
+    
+    <script>
+
+        // 设置元素高度为浏览器可视区域高度
+        var clientHeight = document.documentElement.clientHeight
+        if(clientHeight < 700) clientHeight = 700
+        document.querySelectorAll('.container')[0].style.height= clientHeight + 'px'
+
+         
+    </script>
+</body>
+</html>
