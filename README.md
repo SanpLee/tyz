@@ -1,4 +1,10 @@
-## 20220606更新内容
+## 更新内容
+#### 20220607 
+
+1、官网首页添加悬浮层按钮点击跳转信息介绍页面功能
+2、新增信息介绍页面
+ 
+#### 20220606 
 
 1、官网footer添加：备案跳转连接、协议以及跳转连接、营业执照预览页面
 2、协议h5页面修改为可适配pc端访问通用页面（接口数据同步更新格式）
@@ -7,12 +13,17 @@ ps：协议页面需要等到后台更新数据后方可正常访问。
 
 ## 预览地址
 
-电脑预览  
-官网：https://sanplee.github.io/tyz/homePage/index.html  
+#### 电脑预览  
+官网首页页面：  
+https://sanplee.github.io/tyz/homePage/index.html 
 
-营业执照页面：https://sanplee.github.io/tyz/homePage/license.html
+官网介绍页面：  
+https://sanplee.github.io/tyz/homePage/info.html  
 
-移动端手机预览  
+营业执照页面：  
+https://sanplee.github.io/tyz/homePage/license.html
+
+#### 移动端手机预览  
 H5转发：https://sanplee.github.io/tyz/H5/share.html?code=6a8b17b4a2aa40f43821c9fd164299d5  
 
 H5用户协议(移动端和pc端通用)：https://sanplee.github.io/tyz/H5/userAgreement.html  
@@ -23,6 +34,8 @@ ps: 我上传的是github服务器，你们如果不开vpn访问会比较慢。�
 
 ## 代码下载  
 执行此段代码可下载源码：git clone https://github.com/SanpLee/tyz.git
+
+ps：下载完后，只有H5和homePage这2个文件夹里的内容是源码文件，其它都可以删除
 
 ## 说明
 
